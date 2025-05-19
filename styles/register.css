@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Pacifico" ,Arial, Helvetica, sans-serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.login-container {
+    /* display: flex; */
+    width: 100%;
+    height: 100vh;
+}
+
+.login-container .navbar  {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+.login-container .navbar img {
+    width: 100px;
+}
+
+.login-container .navbar .navbar-content {
+    display: flex;
+}
+
+.login-container .navbar .navbar-content ul {
+    list-style: none;
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.login-container .navbar .navbar-content ul li {
+    margin: 0 15px;
+    color: white;
+    font-family: "Poppins";
+}
+
+.login-container .navbar .navbar-content ul li:hover {
+    cursor: pointer;
+}
+
+.navbar-content ul li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.login-container .navbar .navbar-content img {
+    width: 125px;
+}
+
+.login-container .navbar .room-hotel img {
+    height: 10%;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px); /* Sisakan ruang untuk navbar */
+}
+
+.login-page {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.9); /* Biar teks login lebih jelas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 195px;
+}
+
+.room-hotel {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-hotel img {
+    display: block;
+    /* width: 100%;  */
+    height: 100%;
+    object-fit: cover; /* Supaya gambar memenuhi area */
+}
+
+.login-container .content .room-hotel {
+    min-height: 100vh;
+    /* position: relative; */
+}
+
+.login-page .greeting h1 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.login-page .greeting h2 {
+    font-family: "Pacifico";
+    font-size: 35px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding: 35px;
+}
+
+.tabs a {
+    text-decoration: none;
+}
+
+.tabs button {
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    color: crimson;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    color: darkred;
+}
+
+.tabs .active button {
+    color: darkred;
+    border-bottom: 2px solid darkred;
+}
+
+.tabs .divider {
+    color: #ccc;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.login-form {
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none; /* Hilangkan semua border */
+    border-bottom: 2px solid #ccc; /* Hanya beri border di bagian bawah */
+    outline: none;
+    background-color: transparent; /* Latar belakang transparan */
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-bottom-color: crimson; /* Warna border bawah saat input aktif */
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+.login-form .submit-button {
+    display: flex;
+    justify-content:  center;
+}
+
+.login-form button[type="submit"] {
+    width: 80%;
+    padding: 15px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: darkred;
+    transform: scale(1.02);
+}
+
+.login-form button[type="submit"]:active {
+    background-color: firebrick;
+    transform: scale(0.98);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    /* width: 100%; */
+    /* height: auto; */
+    max-height: 100%;
+    /* max-width: 100%; */
+    transition: transform 0.3s ease; /* Efek zoom saat hover */
+}
+
+.slide:hover img {
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    bottom: -100%; /* Awalnya overlay di luar container */
+    left: 0;
+    width: 100%;
+    height: 50%; /* Tinggi overlay */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient hitam */
+    transition: bottom 0.5s ease; /* Efek transisi untuk overlay */
+    z-index: 100;
+}
+
+.slide:hover::before {
+    bottom: 0; /* Overlay muncul dari bawah saat hover */
+}
+
+.caption {
+    position: absolute;
+    bottom: -100%; /* Awalnya teks di luar container */
+    left: 20px; /* Posisi teks di kiri */
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    z-index: 101; /* Teks di atas overlay */
+    transition: bottom 0.5s ease; /* Efek transisi untuk teks */
+}
+
+.slide:hover .caption {
+    bottom: 20px; /* Teks muncul dari bawah saat hover */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;    
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid crimson;
+    color: crimson;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.terms-checkbox input {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.terms-checkbox label {
+    font-size: 14px;
+    color: #555;
+}
+
+.terms-checkbox a {
+    color: crimson;
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.password-requirements {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .login-page {
+        width: 100%;
+        height: auto;
+        padding-top: 70px;
+    }
+    
+    .room-hotel {
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .login-container .navbar .navbar-content ul {
+        display: none; /* Hide navbar items on mobile */
+    }
+    
+    .login-form {
+        width: 90%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-page {
+        width: 50%;
+    }
+    
+    .room-hotel {
+        width: 50%;
+    }
+    
+    .login-container .navbar .navbar-content ul li {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+}
